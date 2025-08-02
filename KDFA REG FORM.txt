@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kaski District Football Association - Player Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f3f3f3;
+    }
+    h2 {
+      text-align: center;
+      color: #004080;
+    }
+    form {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #002f5f;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Kaski District Football Association<br>Player Registration Form</h2>
+
+  <form action="YOUR_BACKEND_SCRIPT_URL" method="POST">
+    <!-- Personal Info -->
+    <label>Full Name</label>
+    <input type="text" name="full_name" required>
+
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required>
+
+    <label>Gender</label>
+    <select name="gender" required>
+      <option value="">-- Select --</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+    <label>Citizenship / Birth Certificate No.</label>
+    <input type="text" name="document_no">
+
+    <!-- Contact Info -->
+    <label>Permanent Address</label>
+    <input type="text" name="permanent_address" placeholder="Ward, Municipality, District, Province" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label>Email</label>
+    <input type="email" name="email">
+
+    <!-- Guardian Info -->
+    <label>Guardian Name</label>
+    <input type="text" name="guardian_name">
+
+    <label>Guardian Contact Number</label>
+    <input type="tel" name="guardian_phone">
+
+    <!-- Football Info -->
+    <label>Playing Position</label>
+    <input type="text" name="position">
+
+    <label>Preferred Foot</label>
+    <select name="foot">
+      <option value="">-- Select --</option>
+      <option value="Right">Right</option>
+      <option value="Left">Left</option>
+    </select>
+
+    <label>Previous Club/School</label>
+    <input type="text" name="club_school">
+
+    <label>Experience Level</label>
+    <select name="experience">
+      <option value="">-- Select --</option>
+      <option value="Beginner">Beginner</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Advanced">Advanced</option>
+    </select>
+
+    <!-- Medical -->
+    <label>Blood Group</label>
+    <input type="text" name="blood_group">
+
+    <label>Medical Conditions / Allergies</label>
+    <textarea name="medical" rows="3"></textarea>
+
+    <!-- Declaration -->
+    <label>
+      <input type="checkbox" name="agree" required>
+      I confirm the above information is correct.
+    </label>
+
+    <button type="submit">Submit Registration</button>
+  </form>
+
+</body>
+</html>
